@@ -19,6 +19,7 @@
         .option-card:hover {
             border-color: #007bff;
             box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+            transform: scale(1.05);
         }
         .btn-custom {
             width: 100%;
@@ -49,25 +50,29 @@
         </div>
     </nav>
 
-    <div class="container my-5">
-        <!-- Back Button -->
-        <button class="btn btn-secondary mb-4" onclick="history.back()" style="font-family: 'Poppins', sans-serif;">&larr; Back</button>
-        <h1 class="text-center">Register Artist</h1>
-
-        <!-- Option 1: Register Existing Artist -->
-        <div class="option-card">
-            <h4>Register Existing Artist</h4>
-            <p>If the artist is already part of the system, link them to your concert/event.</p>
-            <button class="btn btn-outline-primary btn-custom" data-bs-toggle="modal" data-bs-target="#existingArtistModal">Proceed</button>
+    <div class="container my-5" style="font-family: 'Poppins', sans-serif;">
+        <h1 class="text-center mb-5">Register Artist</h1>
+        <div class="row g-4">
+        <!-- Flex Container for Options -->
+        <div class="d-flex justify-content-center gap-4">
+            <!-- Option 1: Register Existing Artist -->
+            <div class="option-card border rounded p-4 text-center" 
+                 style="flex: 1; max-width: 350px; min-height: 200px; display: flex; flex-direction: column; justify-content: space-between;">
+                <h4>Register Existing Artist</h4>
+                <p>If the artist is already part of the system, link them to your concert/event.</p>
+                <button class="btn btn-outline-primary btn-custom mt-auto" data-bs-toggle="modal" data-bs-target="#existingArtistModal">Proceed</button>
+            </div>
+    
+            <!-- Option 2: Register New Artist -->
+            <div class="option-card border rounded p-4 text-center" 
+                 style="flex: 1; max-width: 350px; min-height: 200px; display: flex; flex-direction: column; justify-content: space-between;">
+                <h4>Register New Artist</h4>
+                <p>Add a new artist to the system by filling out their details.</p>
+                <button class="btn btn-outline-success btn-custom mt-auto" data-bs-toggle="modal" data-bs-target="#newArtistModal">Proceed</button>
+            </div>
         </div>
-
-        <!-- Option 2: Register New Artist -->
-        <div class="option-card">
-            <h4>Register New Artist</h4>
-            <p>Add a new artist to the system by filling out their details.</p>
-            <button class="btn btn-outline-success btn-custom" data-bs-toggle="modal" data-bs-target="#newArtistModal">Proceed</button>
-        </div>
-
+    </div>
+    
         <!-- Modal for Existing Artist -->
         <div class="modal fade" id="existingArtistModal" tabindex="-1" aria-labelledby="existingArtistModalLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -104,7 +109,7 @@
                 </div>
             </div>
         </div>
-
+    
         <!-- Modal for New Artist -->
         <div class="modal fade" id="newArtistModal" tabindex="-1" aria-labelledby="newArtistModalLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -143,6 +148,7 @@
             </div>
         </div>
     </div>
+    
 
     <!-- Footer -->
     <footer class="bg-dark text-white text-center py-3">

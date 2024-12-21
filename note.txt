@@ -1,0 +1,54 @@
+<div class="container my-5">
+        <h1 class="text-center mb-4">Register</h1>
+        <div class="card mx-auto" style="max-width: 500px;">
+            <div class="card-body">
+
+                <div class="tab-content" id="authTabsContent">
+                    <!-- Register Tab -->
+                    <div class="tab-pane fade show active" id="register" role="tabpanel" aria-labelledby="register-tab">
+                        <form>
+                            <div class="mb-3">
+                                <label for="registerRole" class="form-label" style="font-family: 'Poppins', sans-serif;">Register as</label>
+                                <select class="form-select" id="registerRole" style="font-family: 'Poppins', sans-serif;">
+                                    <option value="customer">Customer</option>
+                                    <option value="company">Company</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="registerUsername" class="form-label" style="font-family: 'Poppins', sans-serif;">Username</label>
+                                <input type="text" class="form-control" id="registerUsername" style="font-family: 'Poppins', sans-serif;" placeholder="Enter your username">
+                            </div>
+                            <div class="mb-3">
+                                <label for="registerPhone" class="form-label" style="font-family: 'Poppins', sans-serif;">Phone Number</label>
+                                <input type="tel" class="form-control" id="registerPhone" style="font-family: 'Poppins', sans-serif;" placeholder="Enter your phone number">
+                            </div>
+                            <div class="mb-3">
+                                <label for="registerEmail" class="form-label" style="font-family: 'Poppins', sans-serif;">Email Address</label>
+                                <input type="email" class="form-control" id="registerEmail" style="font-family: 'Poppins', sans-serif;" placeholder="Enter your email">
+                            </div>
+                            <div class="mb-3">
+                                <label for="registerPassword" class="form-label" style="font-family: 'Poppins', sans-serif;">Password</label>
+                                <input type="password" class="form-control" id="registerPassword" style="font-family: 'Poppins', sans-serif;" placeholder="Create a password">
+                            </div>
+                            <div class="mb-3">
+                                <label for="registerConfirmPassword" class="form-label" style="font-family: 'Poppins', sans-serif;">Confirm Password</label>
+                                <input type="password" class="form-control" id="registerConfirmPassword" style="font-family: 'Poppins', sans-serif;" placeholder="Confirm your password">
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100" style="font-family: 'Poppins', sans-serif;">Register</button>
+                        </form>
+
+                        <!-- Log In Hyperlink -->
+                        <div class="text-center mt-3">
+                            <p style="font-family: 'Poppins', sans-serif;">Already have an account? 
+                                <a href="login.html" class="text-primary" style="text-decoration: none; font-weight: 600;">Log In</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><br>
+
+for this register form, there is changes i wanna make. 
+
+for customer. when user choose want to register as customer, the form will show the 
