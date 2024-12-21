@@ -35,13 +35,13 @@
     </nav>
 
     <div class="container my-5">
-        <h1 class="text-center mb-4" style="font-family: 'Poppins', sans-serif;">Search Concert</h1>
+        <h1 class="text-center mb-4" style="font-family: 'Poppins', sans-serif;">Search Concert</h1><br>
         
         <!-- Search Section -->
         <form>
-            <div class="row g-3">
+            <div class="row g-3 justify-content-center text-center">
                 <!-- Search by Name -->
-                <div class="col-md-6">
+                <div class="col-md-3">
                     <div class="input-group">
                         <span class="input-group-text bg-white">
                             <i class="bi bi-search"></i>
@@ -49,22 +49,24 @@
                         <input type="text" class="form-control" placeholder="Search by name" style="font-family: 'Poppins', sans-serif;">
                     </div>
                 </div>
-                
+
                 <!-- Choose Date -->
-                <div class="col-md-6">
+                <div class="col-md-2">
                     <input type="date" class="form-control" style="font-family: 'Poppins', sans-serif;">
                 </div>
-            </div>
-            
-            <div class="row g-3 mt-3">
+
                 <!-- Ticket Price Range -->
-                <div class="col-md-6">
+                <div class="col-md-2">
                     <label for="priceRange" class="form-label" style="font-family: 'Poppins', sans-serif;">Ticket Price Range</label>
                     <input type="range" class="form-range" id="priceRange" min="0" max="500" step="10">
+                    <div class="d-flex justify-content-between">
+                        <span style="font-family: 'Poppins', sans-serif; font-size: 13px;">0</span>
+                        <span style="font-family: 'Poppins', sans-serif; font-size: 13px;">500</span>
+                    </div>
                 </div>
-                
+
                 <!-- Status Filter -->
-                <div class="col-md-6">
+                <div class="col-md-2">
                     <label for="statusFilter" class="form-label" style="font-family: 'Poppins', sans-serif;">Status</label>
                     <select class="form-select" id="statusFilter" style="font-family: 'Poppins', sans-serif;">
                         <option value="all">All</option>
@@ -75,8 +77,8 @@
             </div>
 
             <!-- Buttons -->
-            <div class="text-center mt-4">
-                <button type="submit" class="btn btn-primary me-3" style="font-family: 'Poppins', sans-serif;">Submit</button>
+            <div class="text-center mt-3">
+                <button type="submit" class="btn btn-primary me-2" style="font-family: 'Poppins', sans-serif;">Submit</button>
                 <button type="reset" class="btn btn-secondary" style="font-family: 'Poppins', sans-serif;">Reset</button>
             </div>
         </form>
