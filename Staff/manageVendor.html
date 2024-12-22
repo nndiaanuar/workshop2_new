@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manage Concerts</title>
+    <title>Manage Vendor</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
@@ -66,7 +66,7 @@
         }
 
         .table th {
-            text-align: left; /* Changed from center to left */
+            text-align: left;
         }
 
         @media (max-width: 768px) {
@@ -82,7 +82,6 @@
     </style>
 </head>
 <body>
-    <!-- Container -->
     <div class="container-fluid">
         <div class="row">
             <!-- Sidebar -->
@@ -101,63 +100,52 @@
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Manage Concerts</a>
+                <a class="navbar-brand" href="#">Manage Vendor</a>
                 <a href="logout.html" class="btn btn-danger ms-auto">Logout</a>
             </div>
         </nav>
 
-        <!-- Concert Management Table -->
+        <!-- Vendor Management Table -->
         <div class="container mt-4">
-            <h2 class="mb-4">Concert List</h2>
-            
+            <h2 class="mb-4">Vendor List</h2>
+
             <!-- Table -->
             <table class="table table-striped">
                 <thead class="thead-dark">
                     <tr>
                         <th scope="col">#</th>
-                        <th scope="col">Venue</th>
-                        <th scope="col">Title</th>
-                        <th scope="col">Total Slots</th>
-                        <th scope="col">Date</th>
-                        <th scope="col">Percentage Per Slot</th>
-                        <th scope="col">Status</th>
-                        <th scope="col">Actions</th>
+                        <th>Name</th>
+                        <th>Short Offer</th>
+                        <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
+                    <!-- Example row -->
                     <tr>
                         <th scope="row">1</th>
-                        <td>Venue A</td>
-                        <td>Rock Concert</td>
-                        <td>200</td>
-                        <td>2024-12-25</td>
-                        <td>80%</td>
-                        <td>Active</td>
+                        <td>KFC</td>
+                        <td>Special discounts for app users!</td>
                         <td>
-                            <a href="editConcert.html" class="btn btn-warning btn-sm">Edit</a>
-                            <a href="deleteStaff.html" class="btn btn-danger btn-sm">Delete</a>
+                            <a href="editVendor.html" class="btn btn-warning btn-sm">Edit</a>
+                            <a href="deleteVendor.html" class="btn btn-danger btn-sm">Delete</a>
                         </td>
                     </tr>
                     <tr>
                         <th scope="row">2</th>
-                        <td>Venue B</td>
-                        <td>Jazz Night</td>
-                        <td>150</td>
-                        <td>2024-12-31</td>
-                        <td>70%</td>
-                        <td>Upcoming</td>
+                        <td>McDonald's</td>
+                        <td>Free fries with every burger!</td>
                         <td>
-                            <a href="editConcert.html" class="btn btn-warning btn-sm">Edit</a>
-                            <a href="deleteStaff.html" class="btn btn-danger btn-sm">Delete</a>
+                            <a href="editVendor.html" class="btn btn-warning btn-sm">Edit</a>
+                            <a href="deleteVendor.html" class="btn btn-danger btn-sm">Delete</a>
                         </td>
                     </tr>
-                    <!-- Add more concerts here as needed -->
+                    <!-- Add dynamic rows from the database here -->
                 </tbody>
             </table>
 
-            <!-- Add New Concert Button -->
+            <!-- Add New Vendor Button -->
             <div class="mt-4">
-                <a href="AddConcert.html" class="btn btn-success">Add New Concert</a>
+                <a href="addVendor.html" class="btn btn-success">Add New Vendor</a>
             </div>
         </div>
     </main>

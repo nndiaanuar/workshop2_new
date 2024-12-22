@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manage Concerts</title>
+    <title>Edit Vendor</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
@@ -60,29 +60,19 @@
             font-weight: bold;
         }
 
-        /* Table Styling */
-        .table th, .table td {
-            vertical-align: middle;
+        .form-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        .table th {
-            text-align: left; /* Changed from center to left */
-        }
-
-        @media (max-width: 768px) {
-            .sidebar {
-                height: auto;
-                position: static;
-            }
-
-            main {
-                margin-left: 0;
-            }
+        .form-group {
+            margin-bottom: 1.5rem;
         }
     </style>
 </head>
 <body>
-    <!-- Container -->
     <div class="container-fluid">
         <div class="row">
             <!-- Sidebar -->
@@ -101,63 +91,31 @@
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Manage Concerts</a>
+                <a class="navbar-brand" href="#">Edit Vendor</a>
                 <a href="logout.html" class="btn btn-danger ms-auto">Logout</a>
             </div>
         </nav>
 
-        <!-- Concert Management Table -->
+        <!-- Vendor Edit Form -->
         <div class="container mt-4">
-            <h2 class="mb-4">Concert List</h2>
-            
-            <!-- Table -->
-            <table class="table table-striped">
-                <thead class="thead-dark">
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Venue</th>
-                        <th scope="col">Title</th>
-                        <th scope="col">Total Slots</th>
-                        <th scope="col">Date</th>
-                        <th scope="col">Percentage Per Slot</th>
-                        <th scope="col">Status</th>
-                        <th scope="col">Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Venue A</td>
-                        <td>Rock Concert</td>
-                        <td>200</td>
-                        <td>2024-12-25</td>
-                        <td>80%</td>
-                        <td>Active</td>
-                        <td>
-                            <a href="editConcert.html" class="btn btn-warning btn-sm">Edit</a>
-                            <a href="deleteStaff.html" class="btn btn-danger btn-sm">Delete</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Venue B</td>
-                        <td>Jazz Night</td>
-                        <td>150</td>
-                        <td>2024-12-31</td>
-                        <td>70%</td>
-                        <td>Upcoming</td>
-                        <td>
-                            <a href="editConcert.html" class="btn btn-warning btn-sm">Edit</a>
-                            <a href="deleteStaff.html" class="btn btn-danger btn-sm">Delete</a>
-                        </td>
-                    </tr>
-                    <!-- Add more concerts here as needed -->
-                </tbody>
-            </table>
-
-            <!-- Add New Concert Button -->
-            <div class="mt-4">
-                <a href="AddConcert.html" class="btn btn-success">Add New Concert</a>
+            <div class="form-container">
+                <h2 class="mb-4">Edit Vendor Information</h2>
+                <form action="submit-edit-vendor.php" method="POST">
+                    <div class="form-group">
+                        <label for="name">Vendor Name</label>
+                        <input type="text" class="form-control" id="name" value="KFC" placeholder="Enter vendor name">
+                    </div>
+                    <div class="form-group">
+                        <label for="shortOffer">Short Offer</label>
+                        <input type="text" class="form-control" id="shortOffer" value="Special discounts for app users!" placeholder="Enter short offer">
+                    </div>
+                    <div class="form-group">
+                        <label for="details">Detailed Offer</label>
+                        <textarea class="form-control" id="details" rows="4" placeholder="Enter detailed offer description">Special discounts for first-time users</textarea>
+                    </div>
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                        <a href="manageVendor.html" class="btn btn-secondary ml-2">Cancel</a>
+                </form>
             </div>
         </div>
     </main>
