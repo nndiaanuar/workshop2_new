@@ -1,3 +1,10 @@
+<?php
+session_start();
+if ($_SESSION['position'] != 'ADMIN') {
+    echo "Unauthorized access!";
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -129,7 +136,7 @@
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">Welcome, Admin!</a>
-                <a href="logout.html" class="btn btn-danger ms-auto">Logout</a>
+                <a href="../logout.php" class="btn btn-danger ms-auto">Logout</a>
             </div>
         </nav>
 

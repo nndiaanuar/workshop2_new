@@ -1,3 +1,7 @@
+<?php
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,26 +13,6 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
-    <script>
-        function checkLogin(event) {
-            // Hardcoded admin credentials for demonstration
-            var adminUsername = "admin@gmail.com";
-            var adminPassword = "admin123";
-
-            var username = document.getElementById("loginEmail").value;
-            var password = document.getElementById("loginPassword").value;
-
-            // Check if entered credentials match admin
-            if (username === adminUsername && password === adminPassword) {
-                // Redirect to the admin dashboard
-                window.location.href = "Staff/Dashboard.html"; // Adjust this path as needed
-            } else {
-                alert("Invalid login credentials!");
-            }
-            event.preventDefault(); // Prevent form submission to allow redirection
-        }
-    </script>
 </head>
 <body>
     <!-- Login Form -->
@@ -40,14 +24,14 @@
                 <div class="tab-content" id="authTabsContent">
                     <!-- Login Tab -->
                     <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
-                        <form onsubmit="checkLogin(event)">
+                        <form method="POST" action="process_login.php">
                             <div class="mb-3">
-                                <label for="loginEmail" class="form-label" style="font-family: 'Poppins', sans-serif;">Email Address</label>
-                                <input type="email" class="form-control" id="loginEmail" style="font-family: 'Poppins', sans-serif;" placeholder="Enter your email">
+                                <label for="username" class="form-label" style="font-family: 'Poppins', sans-serif;">Username</label>
+                                <input type="text" name="username" class="form-control" id="username" style="font-family: 'Poppins', sans-serif;" placeholder="Enter your username" required>
                             </div>
                             <div class="mb-3">
-                                <label for="loginPassword" class="form-label" style="font-family: 'Poppins', sans-serif;">Password</label>
-                                <input type="password" class="form-control" id="loginPassword" style="font-family: 'Poppins', sans-serif;" placeholder="Enter your password">
+                                <label for="password" class="form-label" style="font-family: 'Poppins', sans-serif;">Password</label>
+                                <input type="password" name="password" class="form-control" id="password" style="font-family: 'Poppins', sans-serif;" placeholder="Enter your password" required>
                             </div>
                             <button type="submit" class="btn btn-primary w-100" style="font-family: 'Poppins', sans-serif;">Login</button>
                         </form>
