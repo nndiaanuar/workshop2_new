@@ -33,7 +33,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="homepageCompany.html">
+            <a class="navbar-brand" href="homepageCompany.php">
                 <img src="../Images/logo.png" alt="Concert Logo" style="height: 40px; margin-right: 10px;">
                 <span style="font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 24px;">Concert Ticketing</span>
             </a>                
@@ -42,11 +42,11 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="manageArtist.html">Artist Management</a></li>
-                    <li class="nav-item"><a class="nav-link" href="searchconcert.html">Concert</a></li>
-                    <li class="nav-item"><a class="nav-link" href="history.html">History</a></li>
-                    <li class="nav-item"><a class="nav-link" href="profit.html">Profit</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../login.html">Login/Register</a></li>
+                    <li class="nav-item"><a class="nav-link" href="manageArtist.php">Artist Management</a></li>
+                    <li class="nav-item"><a class="nav-link" href="searchconcert.php">Concert</a></li>
+                    <li class="nav-item"><a class="nav-link" href="history.php">History</a></li>
+                    <li class="nav-item"><a class="nav-link" href="profit.php">Profit</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../login.php">Login/Register</a></li>
                 </ul>
             </div>
         </div>
@@ -75,7 +75,7 @@
                         <div class="card-body" style="flex: 1; max-width: 350px; min-height: 200px; display: flex; flex-direction: column; justify-content: space-between;">
                             <h5 class="card-title">Concert 1</h5>
                             <p class="card-text">Experience the best of live performances.</p>
-                            <a href="concertdetails.html" class="btn btn-outline-primary" style="font-family: 'Poppins', sans-serif;">View Details</a>
+                            <a href="concertdetails.php" class="btn btn-outline-primary" style="font-family: 'Poppins', sans-serif;">View Details</a>
                         </div>
                     </div>
                 </div>
@@ -85,7 +85,7 @@
                         <div class="card-body" style="flex: 1; max-width: 350px; min-height: 200px; display: flex; flex-direction: column; justify-content: space-between;">
                             <h5 class="card-title">Concert 2</h5>
                             <p class="card-text">A night of unforgettable music.</p>
-                            <a href="concertdetails.html" class="btn btn-outline-primary">View Details</a>
+                            <a href="concertdetails.php" class="btn btn-outline-primary">View Details</a>
                         </div>
                     </div>
                 </div>
@@ -95,7 +95,7 @@
                         <div class="card-body" style="flex: 1; max-width: 350px; min-height: 200px; display: flex; flex-direction: column; justify-content: space-between;">
                             <h5 class="card-title">Concert 3</h5>
                             <p class="card-text">Feel the rhythm, feel the vibe.</p>
-                            <a href="concertdetails.html" class="btn btn-outline-primary">View Details</a>
+                            <a href="concertdetails.php" class="btn btn-outline-primary">View Details</a>
                         </div>
                     </div>
                 </div>

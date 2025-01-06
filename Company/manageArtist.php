@@ -30,7 +30,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="homepageCompany.html">
+            <a class="navbar-brand" href="homepageCompany.php">
                 <img src="../Images/logo.png" alt="Concert Logo" style="height: 40px; margin-right: 10px;">
                 <span style="font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 24px;">Concert Ticketing</span>
             </a>                
@@ -39,11 +39,11 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="manageArtist.html">Artist Management</a></li>
-                    <li class="nav-item"><a class="nav-link" href="searchconcert.html">Concert</a></li>
-                    <li class="nav-item"><a class="nav-link" href="history.html">History</a></li>
-                    <li class="nav-item"><a class="nav-link" href="profit.html">Profit</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../login.html">Login/Register</a></li>
+                    <li class="nav-item"><a class="nav-link" href="manageArtist.php">Artist Management</a></li>
+                    <li class="nav-item"><a class="nav-link" href="searchconcert.php">Concert</a></li>
+                    <li class="nav-item"><a class="nav-link" href="history.php">History</a></li>
+                    <li class="nav-item"><a class="nav-link" href="profit.php">Profit</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../login.php">Login/Register</a></li>
                 </ul>
             </div>
         </div>
@@ -58,7 +58,7 @@
                 <div class="option-card text-center">
                     <h5>View Current Artists</h5>
                     <p>View the list of artists currently registered in the system.</p>
-                    <a href="viewArtists.html" class="btn btn-primary">View Artists</a>
+                    <a href="viewArtists.php" class="btn btn-primary">View Artists</a>
                 </div>
             </div>
             <!-- Register New Artist -->
@@ -66,7 +66,7 @@
                 <div class="option-card text-center">
                     <h5>Register New Artist</h5>
                     <p>Add new artists to the database with complete details.</p>
-                    <a href="registerArtist.html" class="btn btn-success">Register Artist</a>
+                    <a href="registerArtist.php" class="btn btn-success">Register Artist</a>
                 </div>
             </div>
             <!-- Edit or Drop Artist -->
@@ -74,7 +74,7 @@
                 <div class="option-card text-center">
                     <h5>Edit or Drop Artist Data</h5>
                     <p>Modify artist details or remove an artist from the system.</p>
-                    <a href="editOrDropArtist.html" class="btn btn-danger">Edit/Drop Artist</a>
+                    <a href="editOrDropArtist.php" class="btn btn-danger">Edit/Drop Artist</a>
                 </div>
             </div>
         </div>

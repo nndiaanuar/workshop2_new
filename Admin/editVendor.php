@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Concert</title>
+    <title>Edit Vendor</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
@@ -73,16 +73,15 @@
     </style>
 </head>
 <body>
-    <!-- Container -->
     <div class="container-fluid">
         <div class="row">
             <!-- Sidebar -->
             <nav class="col-md-2 sidebar">
-                <a href="homepageStaff.html"><i class="bi bi-house"></i> Dashboard</a>
-                <a href="manageStaff.html"><i class="bi bi-people"></i> Staff Management</a>
-                <a href="manageConcert.html"><i class="bi bi-music-note-list"></i> Concert Management</a>
-                <a href="manageVenue.html"><i class="bi bi-building"></i> Venue Management</a>
-                <a href="manageVendor.html"><i class="bi bi-shop"></i> Vendor Management</a>
+                <a href="homepageStaff.php"><i class="bi bi-house"></i> Dashboard</a>
+                <a href="manageStaff.php"><i class="bi bi-people"></i> Staff Management</a>
+                <a href="manageConcert.php"><i class="bi bi-music-note-list"></i> Concert Management</a>
+                <a href="manageVenue.php"><i class="bi bi-building"></i> Venue Management</a>
+                <a href="manageVendor.php"><i class="bi bi-shop"></i> Vendor Management</a>
             </nav>
         </div>
     </div>
@@ -92,49 +91,30 @@
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Add Concert</a>
-                <a href="logout.html" class="btn btn-danger ms-auto">Logout</a>
+                <a class="navbar-brand" href="#">Edit Vendor</a>
+                <a href="logout.php" class="btn btn-danger ms-auto">Logout</a>
             </div>
         </nav>
 
-        <!-- Add Concert Form -->
+        <!-- Vendor Edit Form -->
         <div class="container mt-4">
             <div class="form-container">
-                <h2 class="mb-4">Add New Concert</h2>
-                <form action="submit-add-concert.php" method="POST">
+                <h2 class="mb-4">Edit Vendor Information</h2>
+                <form action="submit-edit-vendor.php" method="POST">
                     <div class="form-group">
-                        <label for="title">Concert Title</label>
-                        <input type="text" class="form-control" id="title" name="title" placeholder="Enter concert title" required>
+                        <label for="name">Vendor Name</label>
+                        <input type="text" class="form-control" id="name" value="KFC" placeholder="Enter vendor name">
                     </div>
                     <div class="form-group">
-                        <label for="venue">Venue</label>
-                        <input type="text" class="form-control" id="venue" name="venue" placeholder="Enter concert venue" required>
+                        <label for="shortOffer">Short Offer</label>
+                        <input type="text" class="form-control" id="shortOffer" value="Special discounts for app users!" placeholder="Enter short offer">
                     </div>
                     <div class="form-group">
-                        <label for="totalSlot">Total Slots</label>
-                        <input type="number" class="form-control" id="totalSlot" name="totalSlot" placeholder="Enter total slots available" required>
+                        <label for="details">Detailed Offer</label>
+                        <textarea class="form-control" id="details" rows="4" placeholder="Enter detailed offer description">Special discounts for first-time users</textarea>
                     </div>
-                    <div class="form-group">
-                        <label for="date">Concert Date</label>
-                        <input type="date" class="form-control" id="date" name="date" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="percentagePerSlot">Revenue Percentage Per Ticket Sale</label>
-                        <input type="number" class="form-control" id="percentagePerSlot" name="percentagePerSlot" placeholder="Enter percentage (e.g., 10)" required>
-                        <small class="form-text text-muted">Enter the percentage of revenue per ticket sale that your system will take.</small>
-                    </div>
-                    <div class="form-group">
-                        <label for="status">Status</label>
-                        <select class="form-control" id="status" name="status" required>
-                            <option value="upcoming">Upcoming</option>
-                            <option value="ongoing">Ongoing</option>
-                            <option value="completed">Completed</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <button type="submit" class="btn btn-success">Add Concert</button>
-                        <a href="manageConcert.html" class="btn btn-secondary ml-2">Cancel</a>
-                    </div>
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                        <a href="manageVendor.php" class="btn btn-secondary ml-2">Cancel</a>
                 </form>
             </div>
         </div>

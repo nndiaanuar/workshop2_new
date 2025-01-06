@@ -15,7 +15,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="index_full.html">
+            <a class="navbar-brand" href="index_full.php">
                 <img src="Images/logo.png" alt="Concert Logo" style="height: 40px; margin-right: 10px;">
                 <span style="font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 24px;">Concert Ticketing</span>
             </a>                
@@ -24,11 +24,11 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="wallet.html">My Wallet</a></li>
-                    <li class="nav-item"><a class="nav-link" href="searchconcert.html">Search Concert</a></li>
-                    <li class="nav-item"><a class="nav-link" href="discountoffer.html">Discount Offer</a></li>
-                    <li class="nav-item"><a class="nav-link" href="purchase.html">My Purchase</a></li>
-                    <li class="nav-item"><a class="nav-link" href="login.html">Login/Register</a></li>
+                    <li class="nav-item"><a class="nav-link" href="wallet.php">My Wallet</a></li>
+                    <li class="nav-item"><a class="nav-link" href="searchconcert.php">Search Concert</a></li>
+                    <li class="nav-item"><a class="nav-link" href="discountoffer.php">Discount Offer</a></li>
+                    <li class="nav-item"><a class="nav-link" href="purchase.php">My Purchase</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.php">Login/Register</a></li>
                 </ul>
             </div>
         </div>
@@ -48,7 +48,7 @@
                         <h5 class="card-title">Concert 1</h5>
                         <p class="card-text">Experience the energy of live performances with top local artists.</p>
                         <p class="card-text">Status: Not Confirm</p>
-                        <a href="login.html" class="btn btn-outline-primary">View More</a>
+                        <a href="login.php" class="btn btn-outline-primary">View More</a>
                     </div>
                 </div>
             </div>
@@ -59,7 +59,7 @@
                         <h5 class="card-title">Concert 2</h5>
                         <p class="card-text">Support up-and-coming artists and discover amazing talent!</p>
                         <p class="card-text">Status: Not Confirm</p>
-                        <a href="login.html" class="btn btn-outline-primary">View More</a>
+                        <a href="login.php" class="btn btn-outline-primary">View More</a>
                     </div>
                 </div>
             </div>
@@ -70,7 +70,7 @@
                         <h5 class="card-title">Concert 3</h5>
                         <p class="card-text">Join us for a night of unforgettable music and entertainment.</p>
                         <p class="card-text">Status: Confirm</p>
-                        <a href="login.html" class="btn btn-outline-primary">View More</a>
+                        <a href="login.php" class="btn btn-outline-primary">View More</a>
                     </div>
                 </div>
             </div>

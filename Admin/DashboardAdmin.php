@@ -120,12 +120,12 @@ if ($_SESSION['position'] != 'ADMIN') {
         <div class="row">
              <!-- Sidebar -->
             <nav class="col-md-2 sidebar">
-                <a href="homepageStaff.html"><i class="bi bi-house"></i>Dashboard</a>
-                <a href="manageStaff.html"><i class="bi bi-people"></i>Staff Management</a>
-                <a href="manageConcert.html"><i class="bi bi-music-note-list"></i>Concert Management</a>
-                <a href="manageVenue.html"><i class="bi bi-building"></i>Venue Management</a>
-                <a href="manageVendor.html"><i class="bi bi-shop"></i>Vendor Management</a>
-                <a href="managePayment.html"><i class="bi bi-cash-stack"></i> Payment Management</a>
+                <a href="homepageStaff.php"><i class="bi bi-house"></i>Dashboard</a>
+                <a href="manageStaff.php"><i class="bi bi-people"></i>Staff Management</a>
+                <a href="manageConcert.php"><i class="bi bi-music-note-list"></i>Concert Management</a>
+                <a href="manageVenue.php"><i class="bi bi-building"></i>Venue Management</a>
+                <a href="manageVendor.php"><i class="bi bi-shop"></i>Vendor Management</a>
+                <a href="managePayment.php"><i class="bi bi-cash-stack"></i> Payment Management</a>
             </nav>
         </div>
     </div>

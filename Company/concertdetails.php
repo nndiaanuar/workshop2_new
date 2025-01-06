@@ -86,7 +86,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="homepageCompany.html">
+            <a class="navbar-brand" href="homepageCompany.php">
                 <img src="../Images/logo.png" alt="Concert Logo" style="height: 40px; margin-right: 10px;">
                 <span style="font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 24px;">Concert Ticketing</span>
             </a>                
@@ -95,11 +95,11 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="manageArtist.html">Artist Management</a></li>
-                    <li class="nav-item"><a class="nav-link" href="searchconcert.html">Concert</a></li>
-                    <li class="nav-item"><a class="nav-link" href="history.html">History</a></li>
-                    <li class="nav-item"><a class="nav-link" href="profit.html">Profit</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../login.html">Login/Register</a></li>
+                    <li class="nav-item"><a class="nav-link" href="manageArtist.php">Artist Management</a></li>
+                    <li class="nav-item"><a class="nav-link" href="searchconcert.php">Concert</a></li>
+                    <li class="nav-item"><a class="nav-link" href="history.php">History</a></li>
+                    <li class="nav-item"><a class="nav-link" href="profit.php">Profit</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../login.php">Login/Register</a></li>
                 </ul>
             </div>
         </div>

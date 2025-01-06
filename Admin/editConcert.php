@@ -78,11 +78,11 @@
         <div class="row">
             <!-- Sidebar -->
             <nav class="col-md-2 sidebar">
-                <a href="homepageStaff.html"><i class="bi bi-house"></i> Dashboard</a>
-                <a href="manageStaff.html"><i class="bi bi-people"></i> Staff Management</a>
-                <a href="manageConcert.html"><i class="bi bi-music-note-list"></i> Concert Management</a>
-                <a href="manageVenue.html"><i class="bi bi-building"></i> Venue Management</a>
-                <a href="manageVendor.html"><i class="bi bi-shop"></i> Vendor Management</a>
+                <a href="homepageStaff.php"><i class="bi bi-house"></i> Dashboard</a>
+                <a href="manageStaff.php"><i class="bi bi-people"></i> Staff Management</a>
+                <a href="manageConcert.php"><i class="bi bi-music-note-list"></i> Concert Management</a>
+                <a href="manageVenue.php"><i class="bi bi-building"></i> Venue Management</a>
+                <a href="manageVendor.php"><i class="bi bi-shop"></i> Vendor Management</a>
             </nav>
         </div>
     </div>
@@ -93,7 +93,7 @@
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">Edit Concert</a>
-                <a href="logout.html" class="btn btn-danger ms-auto">Logout</a>
+                <a href="logout.php" class="btn btn-danger ms-auto">Logout</a>
             </div>
         </nav>
 
@@ -143,7 +143,7 @@
 
                     <div class="form-group">
                         <button type="submit" class="btn btn-warning">Update Concert</button>
-                        <a href="manageConcert.html" class="btn btn-secondary ml-2">Cancel</a>
+                        <a href="manageConcert.php" class="btn btn-secondary ml-2">Cancel</a>
                     </div>
                 </form>
             </div>

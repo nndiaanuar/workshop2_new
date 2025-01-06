@@ -39,7 +39,7 @@
                         <!-- Sign Up Hyperlink -->
                         <div class="text-center mt-3">
                             <p style="font-family: 'Poppins', sans-serif;">Don't have an account? 
-                                <a href="register.html" class="text-primary" style="text-decoration: none; font-weight: 600;">Sign Up</a>
+                                <a href="register.php" class="text-primary" style="text-decoration: none; font-weight: 600;">Sign Up</a>
                             </p>
                         </div>
                     </div>

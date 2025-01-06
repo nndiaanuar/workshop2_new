@@ -84,7 +84,7 @@
                         <!-- Log In Hyperlink -->
                         <div class="text-center mt-3">
                             <p style="font-family: 'Poppins', sans-serif;">Already have an account? 
-                                <a href="login.html" class="text-primary" style="text-decoration: none; font-weight: 600;">Log In</a>
+                                <a href="login.php" class="text-primary" style="text-decoration: none; font-weight: 600;">Log In</a>
                             </p>
                         </div>
                     </div>

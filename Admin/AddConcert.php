@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add New Staff</title>
+    <title>Add Concert</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
@@ -78,11 +78,11 @@
         <div class="row">
             <!-- Sidebar -->
             <nav class="col-md-2 sidebar">
-                <a href="homepageStaff.html"><i class="bi bi-house"></i> Dashboard</a>
-                <a href="manageStaff.html"><i class="bi bi-people"></i> Staff Management</a>
-                <a href="manageConcert.html"><i class="bi bi-music-note-list"></i> Concert Management</a>
-                <a href="manageVenue.html"><i class="bi bi-building"></i> Venue Management</a>
-                <a href="manageVendor.html"><i class="bi bi-shop"></i> Vendor Management</a>
+                <a href="homepageStaff.php"><i class="bi bi-house"></i> Dashboard</a>
+                <a href="manageStaff.php"><i class="bi bi-people"></i> Staff Management</a>
+                <a href="manageConcert.php"><i class="bi bi-music-note-list"></i> Concert Management</a>
+                <a href="manageVenue.php"><i class="bi bi-building"></i> Venue Management</a>
+                <a href="manageVendor.php"><i class="bi bi-shop"></i> Vendor Management</a>
             </nav>
         </div>
     </div>
@@ -92,47 +92,48 @@
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Add New Staff</a>
-                <a href="logout.html" class="btn btn-danger ms-auto">Logout</a>
+                <a class="navbar-brand" href="#">Add Concert</a>
+                <a href="logout.php" class="btn btn-danger ms-auto">Logout</a>
             </div>
         </nav>
 
-        <!-- Add Staff Form -->
+        <!-- Add Concert Form -->
         <div class="container mt-4">
             <div class="form-container">
-                <h2 class="mb-4">Enter Staff Information</h2>
-                <form action="submit-new-staff.php" method="POST">
+                <h2 class="mb-4">Add New Concert</h2>
+                <form action="submit-add-concert.php" method="POST">
                     <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter Name" required>
+                        <label for="title">Concert Title</label>
+                        <input type="text" class="form-control" id="title" name="title" placeholder="Enter concert title" required>
                     </div>
                     <div class="form-group">
-                        <label for="ic">IC Number</label>
-                        <input type="text" class="form-control" id="ic" name="ic" placeholder="Enter IC Number" pattern="\d{12}" title="Please enter a 12-digit IC Number without any spaces or dashes" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="gender">Gender</label><br>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="gender" id="male" value="Male" required>
-                            <label class="form-check-label" for="male">Male</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="gender" id="female" value="Female" required>
-                            <label class="form-check-label" for="female">Female</label>
-                        </div>
+                        <label for="venue">Venue</label>
+                        <input type="text" class="form-control" id="venue" name="venue" placeholder="Enter concert venue" required>
                     </div>
                     <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter Phone Number" required>
+                        <label for="totalSlot">Total Slots</label>
+                        <input type="number" class="form-control" id="totalSlot" name="totalSlot" placeholder="Enter total slots available" required>
                     </div>
                     <div class="form-group">
-                        <label for="position">Position</label>
-                        <input type="text" class="form-control" id="position" name="position" placeholder="Enter Position" required>
+                        <label for="date">Concert Date</label>
+                        <input type="date" class="form-control" id="date" name="date" required>
                     </div>
                     <div class="form-group">
-                        <button type="submit" class="btn btn-primary">Add Staff</button>
-                        <a href="manageStaff.html" class="btn btn-secondary ml-2">Cancel</a>
+                        <label for="percentagePerSlot">Revenue Percentage Per Ticket Sale</label>
+                        <input type="number" class="form-control" id="percentagePerSlot" name="percentagePerSlot" placeholder="Enter percentage (e.g., 10)" required>
+                        <small class="form-text text-muted">Enter the percentage of revenue per ticket sale that your system will take.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="status">Status</label>
+                        <select class="form-control" id="status" name="status" required>
+                            <option value="upcoming">Upcoming</option>
+                            <option value="ongoing">Ongoing</option>
+                            <option value="completed">Completed</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success">Add Concert</button>
+                        <a href="manageConcert.php" class="btn btn-secondary ml-2">Cancel</a>
                     </div>
                 </form>
             </div>
