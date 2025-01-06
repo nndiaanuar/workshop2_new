@@ -1,7 +1,14 @@
 <?php
 session_start();
+
 if ($_SESSION['position'] != 'ADMIN') {
     echo "Unauthorized access!";
+    exit();
+}
+
+// Check if the user is logged in, else redirect to the login page
+if (!isset($_SESSION['username'])) {
+    header("Location: login.php");
     exit();
 }
 ?>
@@ -120,7 +127,7 @@ if ($_SESSION['position'] != 'ADMIN') {
         <div class="row">
              <!-- Sidebar -->
             <nav class="col-md-2 sidebar">
-                <a href="homepageStaff.php"><i class="bi bi-house"></i>Dashboard</a>
+                <a href="DashboardAdmin.php"><i class="bi bi-house"></i>Dashboard</a>
                 <a href="manageStaff.php"><i class="bi bi-people"></i>Staff Management</a>
                 <a href="manageConcert.php"><i class="bi bi-music-note-list"></i>Concert Management</a>
                 <a href="manageVenue.php"><i class="bi bi-building"></i>Venue Management</a>
@@ -135,7 +142,9 @@ if ($_SESSION['position'] != 'ADMIN') {
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Welcome, Admin!</a>
+                <a class="navbar-brand" href="#">
+                    Welcome, <?php echo $_SESSION['position'] . ' ' . $_SESSION['name']; ?>
+                </a>
                 <a href="../logout.php" class="btn btn-danger ms-auto">Logout</a>
             </div>
         </nav>

@@ -136,7 +136,9 @@ if (!isset($_SESSION['username'])) {
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Welcome, Staff!</a>
+                <a class="navbar-brand" href="#">
+                    Welcome, <?php echo $_SESSION['position'] . ' ' . $_SESSION['name']; ?>
+                </a>
                 <a href="../logout.php" class="btn btn-danger ms-auto">Logout</a>
             </div>
         </nav>

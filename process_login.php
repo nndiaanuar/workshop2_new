@@ -22,7 +22,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 // Store session data for the logged-in user
                 $_SESSION['username'] = $row['username'];
                 $_SESSION['position'] = $row['position'];
+                $_SESSION['staff_id'] = $row['staff_id']; // Store staff_id for later use
+                $_SESSION['name'] = $row['name']; // Store full name
                 
+                // Regenerate session ID to prevent session fixation attacks
+                session_regenerate_id();
+
                 // Redirect to the respective page based on position
                 if ($row['position'] === 'ADMIN') {
                     header("Location: Admin/DashboardAdmin.php"); // Redirect to admin dashboard

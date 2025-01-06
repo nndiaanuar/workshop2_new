@@ -102,7 +102,7 @@
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">Manage Vendor</a>
-                <a href="logout.php" class="btn btn-danger ms-auto">Logout</a>
+                <a href="../logout.php" class="btn btn-danger ms-auto">Logout</a>
             </div>
         </nav>
 
