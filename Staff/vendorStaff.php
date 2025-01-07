@@ -68,7 +68,11 @@
         .table th {
             text-align: left;
         }
-
+        
+        .table tbody tr:hover {
+            transform: scale(1.01);
+            transition: transform 0.3s ease;
+        }
         @media (max-width: 768px) {
             .sidebar {
                 height: auto;
@@ -86,12 +90,11 @@
         <div class="row">
             <!-- Sidebar -->
             <nav class="col-md-2 sidebar">
-                <a href="DashboardAdmin.php"><i class="bi bi-house"></i>Dashboard</a>
-                <a href="manageStaff.php"><i class="bi bi-people"></i>Staff Management</a>
-                <a href="manageConcert.php"><i class="bi bi-music-note-list"></i>Concert Management</a>
-                <a href="manageVenue.php"><i class="bi bi-building"></i>Venue Management</a>
-                <a href="manageVendor.php"><i class="bi bi-shop"></i>Vendor Management</a>
-                <a href="managePayment.php"><i class="bi bi-cash-stack"></i> Payment Management</a>
+                <a href="homepageStaff.php"><i class="bi bi-house"></i>Dashboard</a>
+                <a href="concertStaff.php"><i class="bi bi-music-note-list"></i>Concert Management</a>
+                <a href="venueStaff.php"><i class="bi bi-building"></i>Venue Management</a>
+                <a href="vendorStaff.php"><i class="bi bi-shop"></i>Vendor Management</a>
+                <a href="paymentStaff.php"><i class="bi bi-cash-stack"></i> Payment Management</a>
             </nav>
         </div>
     </div>

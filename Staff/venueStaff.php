@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manage Concerts</title>
+    <title>Manage Venue</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
@@ -69,6 +69,11 @@
             text-align: left; /* Changed from center to left */
         }
 
+        .table tbody tr:hover {
+            transform: scale(1.01);
+            transition: transform 0.3s ease;
+        }
+        
         @media (max-width: 768px) {
             .sidebar {
                 height: auto;
@@ -87,12 +92,11 @@
         <div class="row">
             <!-- Sidebar -->
             <nav class="col-md-2 sidebar">
-                <a href="homepageStaff.php"><i class="bi bi-house"></i> Dashboard</a>
-                <a href="manageStaff.php"><i class="bi bi-people"></i> Staff Management</a>
-                <a href="manageConcert.php"><i class="bi bi-music-note-list"></i> Concert Management</a>
-                <a href="manageVenue.php"><i class="bi bi-building"></i> Venue Management</a>
-                <a href="manageVendor.php"><i class="bi bi-shop"></i> Vendor Management</a>
-                <a href="managePayment.php"><i class="bi bi-cash-stack"></i> Payment Management</a>
+                <a href="homepageStaff.php"><i class="bi bi-house"></i>Dashboard</a>
+                <a href="concertStaff.php"><i class="bi bi-music-note-list"></i>Concert Management</a>
+                <a href="venueStaff.php"><i class="bi bi-building"></i>Venue Management</a>
+                <a href="vendorStaff.php"><i class="bi bi-shop"></i>Vendor Management</a>
+                <a href="paymentStaff.php"><i class="bi bi-cash-stack"></i> Payment Management</a>
             </nav>
         </div>
     </div>
@@ -102,64 +106,48 @@
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Manage Concerts</a>
+                <a class="navbar-brand" href="#">Manage Venue</a>
                 <a href="../logout.php" class="btn btn-danger ms-auto">Logout</a>
             </div>
         </nav>
 
-        <!-- Concert Management Table -->
+        <!-- Venue Management Table -->
         <div class="container mt-4">
-            <h2 class="mb-4">Concert List</h2>
-            
+            <h2 class="mb-4">Venue List</h2>
+
             <!-- Table -->
             <table class="table table-striped">
                 <thead class="thead-dark">
                     <tr>
                         <th scope="col">#</th>
-                        <th scope="col">Venue</th>
-                        <th scope="col">Title</th>
-                        <th scope="col">Total Slots</th>
-                        <th scope="col">Date</th>
-                        <th scope="col">Percentage Per Slot</th>
-                        <th scope="col">Status</th>
-                        <th scope="col">Actions</th>
+                        <th>Name</th>
+                        <th>Location</th>
+                        <th>Capacity</th>
+                        <th>Rental Cost</th>
+                        <th>Min Ticket Sales</th>
                     </tr>
                 </thead>
                 <tbody>
+                    <!-- Example row -->
                     <tr>
                         <th scope="row">1</th>
-                        <td>Venue A</td>
-                        <td>Rock Concert</td>
-                        <td>200</td>
-                        <td>2024-12-25</td>
-                        <td>80%</td>
-                        <td>Active</td>
-                        <td>
-                            <a href="editConcert.php" class="btn btn-warning btn-sm">Edit</a>
-                            <a href="deleteStaff.php" class="btn btn-danger btn-sm">Delete</a>
-                        </td>
+                        <td>Stadium ABC</td>
+                        <td>City Center</td>
+                        <td>2000</td>
+                        <td>$5000</td>
+                        <td>1500</td>
                     </tr>
                     <tr>
                         <th scope="row">2</th>
-                        <td>Venue B</td>
-                        <td>Jazz Night</td>
-                        <td>150</td>
-                        <td>2024-12-31</td>
-                        <td>70%</td>
-                        <td>Upcoming</td>
-                        <td>
-                            <a href="editConcert.php" class="btn btn-warning btn-sm">Edit</a>
-                            <a href="deleteStaff.php" class="btn btn-danger btn-sm">Delete</a>
-                        </td>
+                        <td>Auditorium XYZ</td>
+                        <td>Westside</td>
+                        <td>500</td>
+                        <td>$1000</td>
+                        <td>300</td>
                     </tr>
-                    <!-- Add more concerts here as needed -->
+                    <!-- Add dynamic rows from the database here -->
                 </tbody>
             </table>
-
-            <!-- Add New Concert Button -->
-            <div class="mt-4">
-                <a href="AddConcert.php" class="btn btn-success">Add New Concert</a>
-            </div>
         </div>
     </main>
 

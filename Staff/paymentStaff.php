@@ -84,12 +84,11 @@
         <div class="row">
             <!-- Sidebar -->
             <nav class="col-md-2 sidebar">
-                <a href="homepageStaff.php"><i class="bi bi-house"></i> Dashboard</a>
-                <a href="manageStaff.php"><i class="bi bi-people"></i> Staff Management</a>
-                <a href="manageConcert.php"><i class="bi bi-music-note-list"></i> Concert Management</a>
-                <a href="manageVenue.php"><i class="bi bi-building"></i> Venue Management</a>
-                <a href="manageVendor.php"><i class="bi bi-shop"></i> Vendor Management</a>
-                <a href="managePayment.php" class="active"><i class="bi bi-cash-stack"></i> Payment Management</a>
+                <a href="homepageStaff.php"><i class="bi bi-house"></i>Dashboard</a>
+                <a href="concertStaff.php"><i class="bi bi-music-note-list"></i>Concert Management</a>
+                <a href="venueStaff.php"><i class="bi bi-building"></i>Venue Management</a>
+                <a href="vendorStaff.php"><i class="bi bi-shop"></i>Vendor Management</a>
+                <a href="paymentStaff.php"><i class="bi bi-cash-stack"></i> Payment Management</a>
             </nav>
         </div>
     </div>
@@ -116,7 +115,6 @@
                         <th scope="col">Concert ID</th>
                         <th scope="col">Staff ID</th>
                         <th scope="col">Payment (RM)</th>
-                        <th scope="col">Actions</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -125,28 +123,9 @@
                         <td>C001</td>
                         <td>S001</td>
                         <td>5000</td>
-                        <td>
-                            <a href="editPayment.php" class="btn btn-warning btn-sm">Edit</a>
-                            <a href="deletePayment.php" class="btn btn-danger btn-sm">Delete</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>C002</td>
-                        <td>S002</td>
-                        <td>3000</td>
-                        <td>
-                            <a href="editPayment.php" class="btn btn-warning btn-sm">Edit</a>
-                            <a href="deletePayment.php" class="btn btn-danger btn-sm">Delete</a>
-                        </td>
                     </tr>
                 </tbody>
             </table>
-
-            <!-- Add New Payment Button -->
-            <div class="mt-4">
-                <a href="addPayment.php" class="btn btn-success">Add New Payment</a>
-            </div>
         </div>
     </main>
 

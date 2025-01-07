@@ -1,9 +1,13 @@
+<?php
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manage Staff</title>
+    <title>Manage Concerts</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
@@ -60,24 +64,18 @@
             font-weight: bold;
         }
 
-         /* Table Hover Effects */
-         .table tbody tr:hover {
-            transform: scale(1.01); /* Subtle zoom effect */
-            transition: transform 0.3s ease;
-        }
-
         /* Table Styling */
         .table th, .table td {
             vertical-align: middle;
         }
 
         .table th {
-            text-align: left;
+            text-align: left; /* Changed from center to left */
         }
 
-        /* Button Styling */
-        .btn-sm {
-            padding: 5px 10px;
+        .table tbody tr:hover {
+            transform: scale(1.01);
+            transition: transform 0.3s ease;
         }
 
         @media (max-width: 768px) {
@@ -98,12 +96,11 @@
         <div class="row">
             <!-- Sidebar -->
             <nav class="col-md-2 sidebar">
-                <a href="homepageStaff.php"><i class="bi bi-house"></i> Dashboard</a>
-                <a href="manageStaff.php"><i class="bi bi-people"></i> Staff Management</a>
-                <a href="manageConcert.php"><i class="bi bi-music-note-list"></i> Concert Management</a>
-                <a href="manageVenue.php"><i class="bi bi-building"></i> Venue Management</a>
-                <a href="manageVendor.php"><i class="bi bi-shop"></i> Vendor Management</a>
-                <a href="managePayment.php"><i class="bi bi-cash-stack"></i> Payment Management</a>
+                <a href="homepageStaff.php"><i class="bi bi-house"></i>Dashboard</a>
+                <a href="concertStaff.php"><i class="bi bi-music-note-list"></i>Concert Management</a>
+                <a href="venueStaff.php"><i class="bi bi-building"></i>Venue Management</a>
+                <a href="vendorStaff.php"><i class="bi bi-shop"></i>Vendor Management</a>
+                <a href="paymentStaff.php"><i class="bi bi-cash-stack"></i> Payment Management</a>
             </nav>
         </div>
     </div>
@@ -113,60 +110,40 @@
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Manage Staff</a>
+                <a class="navbar-brand" href="#">Manage Concerts</a>
                 <a href="../logout.php" class="btn btn-danger ms-auto">Logout</a>
             </div>
         </nav>
 
-        <!-- Staff Management Table -->
+        <!-- Concert Management Table -->
         <div class="container mt-4">
-            <h2 class="mb-4">Staff List</h2>
+            <h2 class="mb-4">Concert List</h2>
             
             <!-- Table -->
             <table class="table table-striped">
                 <thead class="thead-dark">
                     <tr>
                         <th scope="col">#</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">IC No</th>
-                        <th scope="col">Gender</th>
-                        <th scope="col">Phone Number</th>
-                        <th scope="col">Position</th>
-                        <th scope="col">Actions</th>
+                        <th scope="col">Venue</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Total Slots</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Percentage Per Slot</th>
+                        <th scope="col">Status</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <th scope="row">1</th>
-                        <td>Aiman</td>
-                        <td>980101-01-1234</td>
-                        <td>Male</td>
-                        <td>+60123456789</td>
-                        <td>Manager</td>
-                        <td>
-                            <a href="editStaff.php" class="btn btn-warning btn-sm">Edit</a>
-                            <a href="deleteStaff.php" class="btn btn-danger btn-sm">Delete</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Siti</td>
-                        <td>970202-02-2345</td>
-                        <td>Female</td>
-                        <td>+60198765432</td>
-                        <td>Assistant</td>
-                        <td>
-                            <a href="editStaff.php" class="btn btn-warning btn-sm">Edit</a>
-                            <a href="deleteStaff.php" class="btn btn-danger btn-sm">Delete</a>
-                        </td>
+                        <td>Venue A</td>
+                        <td>Rock Concert</td>
+                        <td>200</td>
+                        <td>2024-12-25</td>
+                        <td>80%</td>
+                        <td>Active</td>
                     </tr>
                 </tbody>
             </table>
-
-            <!-- Add New Staff Button -->
-            <div class="mt-4">
-                <a href="addStaff.php" class="btn btn-success">Add New Staff</a>
-            </div>
         </div>
     </main>
 

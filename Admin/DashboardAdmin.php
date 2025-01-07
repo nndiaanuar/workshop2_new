@@ -1,4 +1,6 @@
 <?php
+include '../Database/connect.php';
+
 session_start();
 
 if ($_SESSION['position'] != 'ADMIN') {
@@ -11,6 +13,35 @@ if (!isset($_SESSION['username'])) {
     header("Location: login.php");
     exit();
 }
+
+// Initialize variables for totals
+$totalStaff = 0;
+$totalConcerts = 0;
+$totalVenues = 0;
+
+// Query for Total Staff
+$resultStaff = pg_query($conn, "SELECT COUNT(*) AS total_staff FROM staff");
+if ($resultStaff) {
+    $row = pg_fetch_assoc($resultStaff);
+    $totalStaff = $row['total_staff'];
+}
+
+// Query for Total Concerts
+$resultConcerts = pg_query($conn, "SELECT COUNT(*) AS total_concerts FROM concert");
+if ($resultConcerts) {
+    $row = pg_fetch_assoc($resultConcerts);
+    $totalConcerts = $row['total_concerts'];
+}
+
+// Query for Total Venues
+$resultVenues = pg_query($conn, "SELECT COUNT(*) AS total_venues FROM venue");
+if ($resultVenues) {
+    $row = pg_fetch_assoc($resultVenues);
+    $totalVenues = $row['total_venues'];
+}
+
+// Close the database connection
+pg_close($conn);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -109,6 +140,11 @@ if (!isset($_SESSION['username'])) {
             font-weight: 600;
         }
 
+        .card:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+
         @media (max-width: 768px) {
             .sidebar {
                 height: auto;
@@ -151,39 +187,41 @@ if (!isset($_SESSION['username'])) {
 
         <!-- Dashboard Overview -->
         <div class="container mt-4">
-            <h2 class="mb-4">Dashboard Overview</h2>
-            <div class="row g-4">
-                <div class="col-md-3">
-                    <div class="card bg-primary text-white">
-                        <div class="card-body text-center"><i class="fas fa-users"></i><h5>Total Staff</h5>
-                            <h5>10</h5>
-                        </div>
+        <h2 class="mb-4">Dashboard Overview</h2>
+        <div class="row g-4">
+            <div class="col-md-3">
+                <div class="card bg-primary text-white">
+                    <div class="card-body text-center">
+                        <i class="fas fa-users"></i>
+                        <h5>Total Staff</h5>
+                        <h5><?php echo $totalStaff; ?></h5>
                     </div>
                 </div>
-                <div class="col-md-3">
-                    <div class="card bg-success text-white">
-                        <div class="card-body text-center">
-                            <i class="fas fa-music"></i>
-                            <h5>Total Concerts</h5>
-                            <h5>15</h5>
-                        </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card bg-success text-white">
+                    <div class="card-body text-center">
+                        <i class="fas fa-music"></i>
+                        <h5>Total Concerts</h5>
+                        <h5><?php echo $totalConcerts; ?></h5>
                     </div>
                 </div>
-                <div class="col-md-3">
-                    <div class="card bg-warning text-white">
-                        <div class="card-body text-center">
-                            <i class="fas fa-building"></i>
-                            <h5>Total Venues</h5>
-                            <h5>8</h5>
-                        </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card bg-warning text-white">
+                    <div class="card-body text-center">
+                        <i class="fas fa-building"></i>
+                        <h5>Total Venues</h5>
+                        <h5><?php echo $totalVenues; ?></h5>
                     </div>
                 </div>
+            </div>
                 <div class="col-md-3">
                     <div class="card bg-danger text-white">
                         <div class="card-body text-center">
                             <i class="fas fa-store"></i>
                             <h5>Total Vendors</h5>
-                            <h5>12</h5>
+                            <h5>6</h5>
                         </div>
                     </div>
                 </div>
