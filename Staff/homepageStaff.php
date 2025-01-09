@@ -3,10 +3,14 @@ include '../Database/connect.php';
 
 session_start();
 
-if (!isset($_SESSION['username'])) {
-    echo "Unauthorized access!";
-    exit();
+$staff_ID = $_GET['staff_ID'] ?? null;
+if ($staff_ID) {
+    $_SESSION['staff_ID'] = $staff_ID;
+    echo "Staff ID successfully stored in session: $staff_ID";
+} else {
+    echo "No Staff ID found.";
 }
+
 
 // Initialize variables for totals
 $totalStaff = 0;

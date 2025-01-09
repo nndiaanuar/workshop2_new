@@ -1,7 +1,6 @@
 <?php
-include '../Database/connect.php';
-
 session_start();
+include '../Database/connect.php';
 
 if ($_SESSION['position'] != 'ADMIN') {
     echo "Unauthorized access!";
